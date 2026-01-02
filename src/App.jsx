@@ -1490,8 +1490,8 @@ const BadgePopup = ({ badge, onClose }) => {
   );
 };
 
-// ============ MAIN APP ============
-export default function App() {
+// ============ MAIN APP (Learning Mode) ============
+function MainApp() {
   // Check URL params for parent mode
   const urlParams = new URLSearchParams(window.location.search);
   const isParentUrl = urlParams.get('parent') === 'true';
@@ -4849,5 +4849,95 @@ function ParentDashboard({ gameData, onBack }) {
         </button>
       </div>
     </div>
+  );
+}
+
+// ============ ROUTE COMPONENTS ============
+
+// Login Screen (Route: /)
+function LoginScreen() {
+  const navigate = useNavigate();
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-indigo-600 to-purple-700 p-4 flex items-center justify-center">
+      <div className="max-w-md w-full">
+        <div className="text-center mb-8">
+          <div className="text-7xl mb-4">🎓</div>
+          <h1 className="text-4xl font-black text-white mb-2">Alba's Education App</h1>
+          <p className="text-white/80">Choose your profile to continue</p>
+        </div>
+
+        <div className="space-y-4">
+          {/* Alba's Profile */}
+          <button
+            onClick={() => {
+              localStorage.setItem('user_type', 'alba');
+              localStorage.setItem('viewer_mode', 'false');
+              navigate('/Learning');
+            }}
+            className="w-full bg-white rounded-3xl p-8 shadow-2xl active:scale-95 transition-all"
+          >
+            <div className="text-center">
+              <div className="text-6xl mb-3">✏️</div>
+              <div className="font-black text-2xl text-gray-800 mb-1">Alba</div>
+              <div className="text-gray-600 text-sm">Take tests & earn coins!</div>
+            </div>
+          </button>
+
+          {/* Parent/Viewer Profile */}
+          <button
+            onClick={() => {
+              localStorage.setItem('user_type', 'parent');
+              localStorage.setItem('viewer_mode', 'true');
+              navigate('/Parent');
+            }}
+            className="w-full bg-white/20 backdrop-blur rounded-3xl p-8 border-2 border-white/30 active:scale-95 transition-all"
+          >
+            <div className="text-center">
+              <div className="text-6xl mb-3">👁️</div>
+              <div className="font-bold text-xl text-white mb-1">Mum / Dad</div>
+              <div className="text-white/70 text-sm">View progress & reports</div>
+            </div>
+          </button>
+        </div>
+
+        <div className="mt-6 text-center">
+          <p className="text-white/60 text-xs">Bookmark /Learning or /Parent to skip this screen</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Learning Mode (Route: /Learning) - Alba's version with sync
+function LearningRoute() {
+  React.useEffect(() => {
+    localStorage.setItem('user_type', 'alba');
+    localStorage.setItem('viewer_mode', 'false');
+  }, []);
+  
+  return <MainApp />;
+}
+
+// Parent Mode (Route: /Parent) - Parent viewer (read-only)
+function ParentRoute() {
+  React.useEffect(() => {
+    localStorage.setItem('user_type', 'parent');
+    localStorage.setItem('viewer_mode', 'true');
+  }, []);
+  
+  return <MainApp />;
+}
+
+// ============ APP WITH ROUTING ============
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginScreen />} />
+        <Route path="/Learning" element={<LearningRoute />} />
+        <Route path="/Parent" element={<ParentRoute />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
