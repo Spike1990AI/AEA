@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option 2: Big Single-Column Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-purple-400 via-pink-400 to-rose-400 min-h-screen p-4">
+    <div class="max-w-md mx-auto">
+        <!-- Header -->
+        <div class="bg-white/20 backdrop-blur rounded-2xl p-4 mb-4">
+            <div class="text-white/80 mb-2">← Back</div>
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold text-white">🎁 Rewards</h1>
+                <div class="flex gap-2">
+                    <div class="bg-white/30 backdrop-blur rounded-lg px-3 py-1 flex items-center gap-1">
+                        <span class="text-xl">📚</span>
+                        <span class="text-white font-bold">250</span>
+                    </div>
+                    <div class="bg-white/30 backdrop-blur rounded-lg px-3 py-1 flex items-center gap-1">
+                        <span class="text-xl">🔢</span>
+                        <span class="text-white font-bold">180</span>
+                    </div>
+                    <div class="bg-white/30 backdrop-blur rounded-lg px-3 py-1 flex items-center gap-1">
+                        <span class="text-xl">🔬</span>
+                        <span class="text-white font-bold">120</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-white font-bold text-lg mb-3 px-2">OPTION 2: Big Single Cards</h2>
+
+        <!-- Single Column - Big Cards -->
+        <div class="space-y-3">
+            <!-- Reward 1 - Can Afford -->
+            <div class="bg-white rounded-3xl p-6 shadow-2xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="text-6xl">⭐</div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="font-bold text-2xl text-gray-800">Gold Star Sticker</div>
+                            <span class="text-yellow-400 text-sm">⭐</span>
+                        </div>
+                        <div class="text-gray-500 text-sm">Tier 1 • Starter</div>
+                    </div>
+                </div>
+
+                <!-- Cost Box -->
+                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-4 mb-4 border-2 border-orange-200">
+                    <div class="text-center mb-3">
+                        <div class="text-4xl font-black text-orange-600">45 coins</div>
+                        <div class="text-sm text-orange-500 font-semibold">Total cost</div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="bg-green-100 rounded-lg p-2 text-center border border-green-300">
+                            <div class="text-xs text-green-700 font-semibold">📚 English</div>
+                            <div class="text-lg font-bold text-green-700">15</div>
+                            <div class="text-xs text-green-600">✓ Ready</div>
+                        </div>
+                        <div class="bg-green-100 rounded-lg p-2 text-center border border-green-300">
+                            <div class="text-xs text-green-700 font-semibold">🔢 Maths</div>
+                            <div class="text-lg font-bold text-green-700">15</div>
+                            <div class="text-xs text-green-600">✓ Ready</div>
+                        </div>
+                        <div class="bg-green-100 rounded-lg p-2 text-center border border-green-300">
+                            <div class="text-xs text-green-700 font-semibold">🔬 Science</div>
+                            <div class="text-lg font-bold text-green-700">15</div>
+                            <div class="text-xs text-green-600">✓ Ready</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Claim Button -->
+                <button class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl py-4 font-bold text-xl shadow-xl active:scale-95 transition-all">
+                    🎉 Claim Reward!
+                </button>
+            </div>
+
+            <!-- Reward 2 - Need More -->
+            <div class="bg-white rounded-3xl p-6 shadow-2xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="text-6xl">🎬</div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="font-bold text-2xl text-gray-800">Cinema Trip</div>
+                            <span class="text-yellow-400 text-sm">⭐⭐⭐</span>
+                        </div>
+                        <div class="text-gray-500 text-sm">Tier 3 • Silver</div>
+                    </div>
+                </div>
+
+                <!-- Cost Box -->
+                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-4 mb-4 border-2 border-orange-200">
+                    <div class="text-center mb-3">
+                        <div class="text-4xl font-black text-orange-600">1305 coins</div>
+                        <div class="text-sm text-orange-500 font-semibold">Total cost</div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="bg-red-100 rounded-lg p-2 text-center border border-red-300">
+                            <div class="text-xs text-red-700 font-semibold">📚 English</div>
+                            <div class="text-lg font-bold text-red-700">435</div>
+                            <div class="text-xs text-red-600">Need 185</div>
+                        </div>
+                        <div class="bg-red-100 rounded-lg p-2 text-center border border-red-300">
+                            <div class="text-xs text-red-700 font-semibold">🔢 Maths</div>
+                            <div class="text-lg font-bold text-red-700">435</div>
+                            <div class="text-xs text-red-600">Need 255</div>
+                        </div>
+                        <div class="bg-red-100 rounded-lg p-2 text-center border border-red-300">
+                            <div class="text-xs text-red-700 font-semibold">🔬 Science</div>
+                            <div class="text-lg font-bold text-red-700">435</div>
+                            <div class="text-xs text-red-600">Need 315</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Locked Button -->
+                <button disabled class="w-full bg-gray-200 text-gray-400 rounded-2xl py-4 font-bold text-xl shadow-xl cursor-not-allowed">
+                    🔒 Not Enough Coins
+                </button>
+            </div>
+
+            <!-- Reward 3 - Claimed -->
+            <div class="bg-white rounded-3xl p-6 shadow-2xl border-4 border-purple-400">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="text-6xl">🍿</div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="font-bold text-2xl text-gray-800">Pick a Snack</div>
+                            <span class="text-yellow-400 text-sm">⭐</span>
+                        </div>
+                        <div class="text-gray-500 text-sm">Tier 1 • Starter</div>
+                    </div>
+                </div>
+
+                <!-- Cost Box -->
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-4 mb-4 border-2 border-purple-200">
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-purple-600">✓ Already Claimed!</div>
+                        <div class="text-sm text-purple-500 font-semibold">Redeemed on 25 Dec 2024</div>
+                    </div>
+                </div>
+
+                <!-- Claimed Status -->
+                <div class="w-full bg-purple-100 text-purple-600 rounded-2xl py-4 font-bold text-xl text-center">
+                    🎉 Enjoyed!
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 bg-white/20 backdrop-blur rounded-xl p-4">
+            <p class="text-white font-bold mb-2">✅ Pros:</p>
+            <ul class="text-white text-sm space-y-1">
+                <li>• More exciting and special</li>
+                <li>• Clear breakdown always visible</li>
+                <li>• Bigger icons and text (easier to read)</li>
+                <li>• Shows exactly what you need</li>
+            </ul>
+            <p class="text-white font-bold mt-3 mb-2">❌ Cons:</p>
+            <ul class="text-white text-sm space-y-1">
+                <li>• More scrolling needed</li>
+                <li>• Can't see many rewards at once</li>
+                <li>• Takes longer to browse</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
